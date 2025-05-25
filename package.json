@@ -1,0 +1,31 @@
+{
+  "name": "compress-for-chatgpt",
+  "displayName": "Compress for ChatGPT",
+  "description": "Compress code for pasting into ChatGPT using gzip+base64",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "main": "./dist/extension.js",
+  "activationEvents": ["onCommand:extension.compressForChatGPT"],
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.compressForChatGPT",
+        "title": "Compress for ChatGPT"
+      }
+    ]
+  },
+  "dependencies": {
+    "pako": "^2.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.21",
+    "@types/pako": "^2.0.3",
+    "@types/vscode": "^1.70.0",
+    "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "vscode:prepublish": "tsc -p ./"
+  }
+}
