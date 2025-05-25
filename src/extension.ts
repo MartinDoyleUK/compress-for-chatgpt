@@ -2,6 +2,8 @@ import * as vscode from 'vscode';
 import { gzip } from 'pako';
 
 export function activate(context: vscode.ExtensionContext) {
+  console.log('Compress for ChatGPT extension activated');
+
   const disposable = vscode.commands.registerCommand('extension.compressForChatGPT', async () => {
     const editor = vscode.window.activeTextEditor;
     if (!editor) {

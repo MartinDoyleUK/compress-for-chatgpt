@@ -6,8 +6,10 @@
   "engines": {
     "vscode": "^1.70.0"
   },
+  "activationEvents": [
+    "onCommand:extension.compressForChatGPT"
+  ],
   "main": "./dist/extension.js",
-  "activationEvents": ["onCommand:extension.compressForChatGPT"],
   "contributes": {
     "commands": [
       {
@@ -20,10 +22,10 @@
     "pako": "^2.1.0"
   },
   "devDependencies": {
-    "@types/node": "^22.15.21",
-    "@types/pako": "^2.0.3",
     "@types/vscode": "^1.70.0",
-    "typescript": "^5.0.0"
+    "typescript": "^5.0.0",
+    "@types/node": "^18.0.0",
+    "@types/pako": "^2.0.0"
   },
   "scripts": {
     "vscode:prepublish": "tsc -p ./"
